@@ -19,9 +19,9 @@ const Hero = () => {
   const gridScale = useTransform(scrollYProgress, [0, 1], [1, 1.15]);
 
   const stats = [
-    { value: "15+", label: "Years in security" },
-    { value: "100+", label: "Engagements" },
-    { value: "24/7", label: "On call" },
+    { value: "15+", label: "Years" },
+    { value: "100+", label: "Projects" },
+    { value: "24/7", label: "Support" },
   ];
 
   return (
@@ -111,15 +111,15 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.6 }}
-              className="grid grid-cols-3 gap-4 max-w-2xl mx-auto"
+              className="grid grid-cols-3 gap-3 max-w-xl mx-auto"
             >
               {stats.map((s) => (
                 <div
                   key={s.label}
-                  className="rounded-2xl border border-border/60 bg-card/30 backdrop-blur-md px-4 py-5 hover:border-primary/40 hover:bg-card/50 transition-all"
+                  className="rounded-lg border border-border/50 bg-card/20 backdrop-blur-md px-3 py-3 hover:border-primary/40 hover:bg-card/40 transition-all"
                 >
-                  <div className="text-2xl md:text-3xl font-display font-bold text-gradient">{s.value}</div>
-                  <div className="text-xs md:text-sm text-muted-foreground mt-1 uppercase tracking-wider">{s.label}</div>
+                  <div className="text-lg md:text-xl font-display font-bold text-gradient">{s.value}</div>
+                  <div className="text-xs text-muted-foreground mt-1 uppercase tracking-wider">{s.label}</div>
                 </div>
               ))}
             </motion.div>

@@ -10,7 +10,7 @@ const testimonials = [
   },
   {
     quote:
-      "Working with Cypel, we passed SOC 2 Type 2 with zero findings. He built our GRC program from scratch — methodical, calm, and incredibly effective.",
+      "Working with Cypel, we passed SOC 2 Type 2 with zero findings. He built our GRC program with precision and clarity.",
     name: "David Cohen",
     role: "VP Engineering, Payments Co.",
   },

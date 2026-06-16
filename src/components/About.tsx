@@ -16,7 +16,7 @@ const About = () => {
     {
       icon: BadgeCheck,
       title: "Security Certifications",
-      description: "End-to-end readiness and audit support for SOC 2 Type 2, ISO 27001/27017/27018, PCI DSS, and HIPAA — from gap analysis to certification.",
+      description: "Readiness and audit support for SOC 2 Type 2, ISO 27001, PCI DSS, and HIPAA compliance.",
     },
     {
       icon: ClipboardList,
