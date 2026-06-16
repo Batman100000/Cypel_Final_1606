@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222 47% 5%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 47% 8%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 47% 8%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 190 95% 55%;
+    --primary-foreground: 222 47% 5%;
+    --primary-glow: 190 100% 70%;
+
+    --secondary: 222 40% 12%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 222 40% 12%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 270 95% 65%;
+    --accent-foreground: 222 47% 5%;
+    --accent-glow: 280 100% 75%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 222 40% 15%;
+    --input: 222 40% 15%;
+    --ring: 190 95% 55%;
+
+    --radius: 0.75rem;
+
+    --gradient-hyper: linear-gradient(135deg, hsl(190 95% 55%), hsl(270 95% 65%), hsl(330 90% 60%));
+    --gradient-glow: radial-gradient(circle at top, hsl(190 95% 55% / 0.25), transparent 60%);
+    --shadow-glow: 0 0 40px hsl(190 95% 55% / 0.35);
+    --shadow-accent-glow: 0 0 60px hsl(270 95% 65% / 0.4);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    background-image:
+      radial-gradient(circle at 20% 0%, hsl(190 95% 55% / 0.12), transparent 50%),
+      radial-gradient(circle at 80% 50%, hsl(270 95% 65% / 0.10), transparent 50%),
+      radial-gradient(circle at 50% 100%, hsl(330 90% 60% / 0.08), transparent 50%);
+    background-attachment: fixed;
+  }
+}
+
+@layer components {
+  /* Hyper Frame - animated gradient border */
+  .hyper-frame {
+    @apply relative rounded-2xl p-[1.5px] overflow-hidden;
+    background: conic-gradient(
+      from var(--angle, 0deg),
+      hsl(var(--primary)) 0%,
+      hsl(var(--accent)) 25%,
+      hsl(330 90% 60%) 50%,
+      hsl(var(--accent)) 75%,
+      hsl(var(--primary)) 100%
+    );
+    animation: hyper-spin 6s linear infinite;
+  }
+
+  .hyper-frame > * {
+    animation: hyper-spin 6s linear infinite reverse;
+  }
+
+  .hyper-frame-inner {
+    @apply relative rounded-2xl bg-card h-full w-full;
+  }
+
+  /* Static glow border (lighter weight) */
+  .glow-border {
+    @apply relative rounded-2xl border border-border/60 bg-card/60 backdrop-blur-xl;
+    box-shadow: 0 0 0 1px hsl(var(--border) / 0.4), 0 20px 60px -20px hsl(var(--primary) / 0.25);
+  }
+
+  .glow-border:hover {
+    box-shadow: 0 0 0 1px hsl(var(--primary) / 0.5), 0 25px 70px -15px hsl(var(--primary) / 0.5);
+  }
+
+  .text-gradient {
+    background: var(--gradient-hyper);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .grid-bg {
+    background-image:
+      linear-gradient(hsl(var(--border) / 0.4) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--border) / 0.4) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+  }
+}
+
+@keyframes hyper-spin {
+  to { --angle: 360deg; }
+}
+
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes float-orb {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(30px, -30px) scale(1.1); }
+}
