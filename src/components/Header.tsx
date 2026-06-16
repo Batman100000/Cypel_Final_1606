@@ -45,28 +45,28 @@ const Header = () => {
           : "bg-transparent"
       }`}
     >
-      <nav className="container mx-auto px-4 h-20 flex items-center justify-between">
-        <a href="#" className="flex items-center gap-3 group pt-2">
-          <motion.div className="relative w-12 h-12 md:w-14 md:h-14">
+      <nav className="container mx-auto px-4 h-24 flex items-center justify-between">
+        <a href="#" className="flex items-center gap-4 group">
+          <motion.div className="relative w-16 h-16 md:w-20 md:h-20">
             <motion.div
               animate={{ rotate: 360 }}
               transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
-              className="absolute inset-[-6px] rounded-full border border-dashed border-cyan-500/40"
+              className="absolute inset-[-8px] rounded-full border border-dashed border-cyan-500/40"
             />
             <motion.div
               animate={{ rotate: -360 }}
               transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
-              className="absolute inset-[-10px] rounded-full border border-cyan-400/20"
+              className="absolute inset-[-12px] rounded-full border border-cyan-400/20"
             />
             <img
               src={cypelLogo}
               alt="Cypel logo"
-              width={48}
-              height={48}
-              className="w-full h-full object-cover rounded-full ring-2 ring-cyan-500/40 drop-shadow-[0_0_15px_rgba(34,211,238,0.3)]"
+              width={64}
+              height={64}
+              className="w-full h-full object-cover rounded-full ring-2 ring-cyan-500/40 drop-shadow-[0_0_20px_rgba(34,211,238,0.4)]"
             />
           </motion.div>
-          <span className="font-display font-bold text-lg md:text-xl text-white tracking-tight hidden sm:inline">
+          <span className="font-display font-bold text-2xl md:text-3xl text-white tracking-tight hidden sm:inline">
             Cypel<span className="text-cyan-400">.</span>
           </span>
         </a>
