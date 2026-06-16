@@ -1,7 +1,7 @@
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { useRef } from "react";
 import { Shield, ChevronDown, Sparkles, Lock, Zap } from "lucide-react";
-import cypelLogo from "@/assets/cypel-logo.png.asset.json";
+import cypelLogo from "@/assets/cypel-logo.png";
 
 const Hero = () => {
   const ref = useRef<HTMLElement>(null);
@@ -67,7 +67,7 @@ const Hero = () => {
           {/* Logo with orbiting rings */}
           <motion.div
             style={{ y: yLogo, scale: scaleLogo }}
-            className="relative mx-auto mb-8 w-56 h-56 md:w-72 md:h-72 lg:w-80 lg:h-80"
+            className="relative mx-auto mb-8 w-40 h-40 md:w-56 md:h-56 lg:w-64 lg:h-64"
           >
             <motion.div
               animate={{ rotate: 360 }}
@@ -85,10 +85,10 @@ const Hero = () => {
               className="absolute inset-0 rounded-full bg-primary/30 blur-2xl"
             />
             <motion.img
-              src={cypelLogo.url}
+              src={cypelLogo}
               alt="Cypel brand emblem"
-              width={1024}
-              height={1024}
+              width={512}
+              height={512}
               style={{ rotate: rotateLogo }}
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -106,7 +106,7 @@ const Hero = () => {
               className="inline-flex items-center gap-2 px-4 py-1.5 mb-6 rounded-full border border-primary/30 bg-primary/10 backdrop-blur-sm text-xs font-mono uppercase tracking-[0.2em] text-primary"
             >
               <Sparkles className="w-3.5 h-3.5" />
-              CISO · vCISO · AI Security
+              DPO · CISO · vCISO · AI Security
             </motion.div>
 
             <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-display font-bold mb-6 leading-[1.05] tracking-tight">

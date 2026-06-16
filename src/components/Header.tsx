@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import cypelLogo from "@/assets/cypel-logo.png.asset.json";
+import cypelLogo from "@/assets/cypel-logo.png";
 
 const links = [
   { href: "#services", label: "Services" },
@@ -34,11 +34,11 @@ const Header = () => {
       <nav className="container mx-auto px-4 h-16 flex items-center justify-between">
         <a href="#" className="flex items-center gap-2 group">
           <img
-            src={cypelLogo.url}
+            src={cypelLogo}
             alt="Cypel logo"
-            width={56}
-            height={56}
-            className="w-14 h-14 object-cover rounded-full ring-1 ring-primary/40 drop-shadow-[0_0_12px_hsl(var(--primary)/0.5)] group-hover:scale-110 transition-transform"
+            width={40}
+            height={40}
+            className="w-10 h-10 object-cover rounded-full ring-1 ring-primary/40 drop-shadow-[0_0_12px_hsl(var(--primary)/0.5)] group-hover:scale-110 transition-transform"
           />
           <span className="font-display font-bold text-foreground tracking-tight">
             Cypel<span className="text-gradient">.</span>
