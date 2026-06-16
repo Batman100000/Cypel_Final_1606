@@ -86,8 +86,8 @@ const About = () => {
   ];
 
   return (
-    <section id="services" className="py-32 relative">
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/5 blur-3xl rounded-full pointer-events-none" />
+    <section id="services" className="py-32 relative bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-cyan-500/5 blur-3xl rounded-full pointer-events-none" />
 
       <div className="container mx-auto px-4 relative">
         <motion.div
@@ -97,13 +97,12 @@ const About = () => {
           viewport={{ once: true }}
           className="text-center mb-20"
         >
-          <span className="font-mono text-primary text-xs uppercase tracking-[0.3em]">// What I Offer</span>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mt-4 mb-6 tracking-tight">
-            Cybersecurity <span className="text-gradient">Services</span>
+          <span className="font-mono text-cyan-400 text-xs uppercase tracking-[0.3em]">// Services</span>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mt-4 mb-6 tracking-tight text-white">
+            Cybersecurity Services
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Comprehensive security solutions tailored for enterprises and fintechs,
-            backed by proven results and deep industry expertise.
+          <p className="text-lg text-slate-300 max-w-2xl mx-auto">
+            Comprehensive security solutions tailored for enterprises and fintechs. Proven expertise, measurable results.
           </p>
         </motion.div>
 
@@ -116,18 +115,13 @@ const About = () => {
               transition={{ duration: 0.5, delay: index * 0.08 }}
               viewport={{ once: true }}
               whileHover={{ y: -6 }}
-              className="group relative glow-border p-8 transition-all duration-500"
+              className="group relative border border-slate-700/40 bg-slate-800/20 backdrop-blur-sm p-8 rounded-lg transition-all duration-500 hover:border-slate-600/60 hover:bg-slate-800/30"
             >
-              {/* corner accents */}
-              <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-primary/40 rounded-tl-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
-              <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-accent/40 rounded-br-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
-
-              <div className="relative w-14 h-14 rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center mb-6 group-hover:from-primary/40 group-hover:to-accent/40 transition-all">
-                <service.icon className="w-7 h-7 text-primary group-hover:text-primary-glow transition-colors" />
-                <div className="absolute inset-0 rounded-xl bg-primary/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="relative w-12 h-12 rounded-lg bg-cyan-500/10 flex items-center justify-center mb-6 group-hover:bg-cyan-500/20 transition-all">
+                <service.icon className="w-6 h-6 text-cyan-400" />
               </div>
-              <h3 className="text-xl font-display font-bold text-foreground mb-3">{service.title}</h3>
-              <p className="text-muted-foreground leading-relaxed">{service.description}</p>
+              <h3 className="text-lg font-display font-bold text-white mb-3">{service.title}</h3>
+              <p className="text-slate-300 leading-relaxed text-sm">{service.description}</p>
             </motion.div>
           ))}
         </div>
