@@ -57,46 +57,13 @@ const Hero = () => {
       />
 
 
-      <motion.div style={{ opacity: opacityContent }} className="container mx-auto px-4 relative z-10">
+      <motion.div style={{ opacity: opacityContent }} className="container mx-auto px-4 relative z-10 flex items-center justify-center min-h-screen">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center max-w-5xl mx-auto"
+          className="text-center max-w-5xl mx-auto pt-20 md:pt-0"
         >
-          {/* Logo with orbiting rings */}
-          <motion.div
-            style={{ y: yLogo, scale: scaleLogo }}
-            className="relative mx-auto mb-8 w-40 h-40 md:w-56 md:h-56 lg:w-64 lg:h-64"
-          >
-            <motion.div
-              animate={{ rotate: 360 }}
-              transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
-              className="absolute inset-[-18px] rounded-full border border-dashed border-primary/40"
-            />
-            <motion.div
-              animate={{ rotate: -360 }}
-              transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
-              className="absolute inset-[-36px] rounded-full border border-accent/30"
-            />
-            <motion.div
-              animate={{ scale: [1, 1.08, 1], opacity: [0.5, 0.9, 0.5] }}
-              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute inset-0 rounded-full bg-primary/30 blur-2xl"
-            />
-            <motion.img
-              src={cypelLogo}
-              alt="Cypel brand emblem"
-              width={512}
-              height={512}
-              style={{ rotate: rotateLogo }}
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-              className="relative w-full h-full object-cover rounded-full ring-2 ring-primary/40 drop-shadow-[0_0_60px_hsl(var(--primary)/0.6)]"
-            />
-          </motion.div>
-
           <motion.div style={{ y: yText }}>
             {/* Badge */}
             <motion.div
@@ -109,11 +76,11 @@ const Hero = () => {
               DPO · CISO · vCISO · AI Security
             </motion.div>
 
-            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-display font-bold mb-6 leading-[1.05] tracking-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-6 leading-[1.05] tracking-tight">
               <span className="block text-gradient">Elite Cybersecurity Services</span>
             </h1>
 
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
+            <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
               AI-Driven Security. We make the impossible possible, empowering security teams to scale at the speed of light and defend what matters most.
             </p>
 
