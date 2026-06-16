@@ -32,7 +32,7 @@ const Contact = () => {
                 
                 { icon: Phone, label: "Phone", value: "+972 52-837-3362", href: "tel:+972528373362" },
                 { icon: MessageCircle, label: "WhatsApp", value: "Chat on WhatsApp", href: "https://wa.me/972528373362", external: true },
-                { icon: Linkedin, label: "LinkedIn", value: "Connect on LinkedIn", href: "https://www.linkedin.com/in/asaf-apelbaum", external: true },
+                { icon: Linkedin, label: "LinkedIn", value: "Connect on LinkedIn", href: "https://www.linkedin.com/in/asaf-apelbaum-cybersecurityai/", external: true },
                 { icon: MapPin, label: "Location", value: "Israel · Remote Available" },
               ].map((item) => {
                 const Inner = (
