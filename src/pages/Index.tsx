@@ -1,5 +1,6 @@
 import Header from "../components/Header";
 import Hero from "../components/Hero";
+import AboutCypel from "../components/AboutCypel";
 import About from "../components/About";
 import Projects from "../components/Projects";
 import Contact from "../components/Contact";
@@ -41,6 +42,7 @@ const Index = () => {
       />
       <Header />
       <Hero />
+      <AboutCypel />
       <About />
       <Projects />
       <Contact />
