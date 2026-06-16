@@ -35,7 +35,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center max-w-5xl mx-auto -mt-16 md:mt-0"
+          className="text-center max-w-5xl mx-auto -mt-32 md:-mt-20"
         >
           <motion.div style={{ y: yText }}>
             {/* Badge */}
